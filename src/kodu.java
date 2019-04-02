@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class kodu {
+    public static void main(String[] args) {
+        peatus();
+    }
 
     public static void algus() {
         System.out.println("Ja siit ta tuleb! ");
@@ -36,7 +39,7 @@ public class kodu {
 
         }
     }
-
+    static Mängija mängija = new Mängija("Peeter Paulus");
     static void hobusevaras() {
         System.out.println("Sa pöördud hobusevarga poole: \"Hei, kas sa oled hobusevaras?\"\n" +
                 "Hobusevaras vaatab sulle otsa ja ignob küsimust: \"A mis su nimi on?\"\n" +
@@ -44,7 +47,7 @@ public class kodu {
                 "Lõpuks siiski koidab! Su nimi on: ");
         Scanner vastused = new Scanner(System.in);
         String nimi = vastused.nextLine();
-        Mängija mängija = new Mängija(nimi);
+        mängija.setNimi(nimi);
         System.out.println("Sa ütled hobusevargale oma nime. Ta vaatab sinu poole ja ütleb: \" " + mängija.getNimi() + ", heh nii loll nimi.\"\n" +
                 "Sa vihastud räigelt. Kas sa virutad hobusevargale? (Y/N)");
         String vastus = vastused.nextLine();
@@ -52,8 +55,10 @@ public class kodu {
             System.out.println("Sa proovid hobusevargale virutada, aga avastad, et su käed on kinni seotud. \n" +
                     "Seega otsustad sa talle peaga virutada. Selle peale virutab hobusevaras sulle peaga ja sul läheb pilt mustaks.");
             mängija.järgminePäev(1);
+            peatus();
         } else if (vastus.equals("N")) {
             System.out.println("Sa otsustad vaikida. Hobusevaras on pettunud, ta tahtis kakelda. Pettumusest keerab ta sulle selja ja jääb magama.");
+            öö();
         } else {
             System.out.println("Sa ei oska kirjutada, proovi uuesti. \nKaks tähte ainult. \nEi ole nii raske. \nLoe siis uuesti ja mõtle järele, mida sult tahetakse.");
             try {
@@ -73,7 +78,8 @@ public class kodu {
                 "Mis su nimi üldse on?\"");
         Scanner vastused = new Scanner(System.in);
         String nimi = vastused.nextLine();
-        Mängija mängija = new Mängija(nimi);
+        mängija.setNimi(nimi);
+
         System.out.println("Sa ütled hobusevargale oma nime. Ta vaatab sinu poole ja ütleb: \" " + mängija.getNimi() + ", heh ma arvasingi et sinusugusel memmekal on selline nimi.\"\n" +
                 "Sa vihastud räigelt. Kas sa virutad hobusevargale? (Y/N)");
         String vastus = vastused.nextLine();
@@ -81,10 +87,12 @@ public class kodu {
             System.out.println("Sa üritad teki alt välja hüpata, et hobusevargale virutada, \n" +
                     "kuid komistad tekisaba otsa ja lööd pea ära. Sul läheb pilt mustaks.");
             mängija.järgminePäev(1);
+            peatus();
         }
         else if (vastus.equals("N")){
             System.out.println("Sa otsustad kommentaarist üle olla ja kuna teki all on mõnusalt, soe jääd sa varsti magama.");
             mängija.järgminePäev(1);
+            peatus();
         }
         else {
             System.out.println("Sa ei oska kirjutada, proovi uuesti. \nKaks tähte ainult. \nEi ole nii raske. \nLoe siis uuesti ja mõtle järele, mida sult tahetakse.");
@@ -99,9 +107,48 @@ public class kodu {
 
     }
     static void peatus(){
-
         System.out.println("On uus hommik. Sa ärkad selle peale, et vankri juht hüüab valjult sinu nime. \n" +
                 "Kui sa lõpuks reageerid, käsib ta sul vankrist VÄLJA ronida. Sa märkad, et su KÄED on ikka veel seotud. \n" +
-                "");
+                "Mida sa edasi teed?");
+        Scanner vastused = new Scanner(System.in);
+        String vastus = vastused.nextLine();
+        if(vastus.equals("VÄLJA")){
+            System.out.println("Sa otsustad käsule alluda ja vankrist lahkuda. Su jalg jääb vankriserva taha kinni ja sa hakkad kukkuma.");
+            double surm = Math.random();
+            if(surm<0.9){
+                Linn.linnaServ();
+            }
+            else {
+                System.out.println("Sa komistad eriti õnnetult ja saad surma.");
+                mängija.surm();
+            }
+        }
+        else{
+            System.out.println("Sa annad vankrijuhile märku, et tahad oma käsi vabaks saada. Ta raputab ainult pead. \n" +
+                    "Sa oled sunnitud seotud kätega vankrist väljuma ja komistad.");
+            double surm = Math.random();
+            if(surm<0.9){
+                Linn.linnaServ();
+            }
+            else {
+                System.out.println("Sa komistad eriti õnnetult ja saad surma.");
+                mängija.surm();
+        }
+    }
+    }
+    static void öö(){
+        System.out.println("Kuni hobusevaras magab, jälgid sina mööduvat maastikku. Ühe hetkel tundub sulle, et ümbrus on soodne põgenemiseks. \n" +
+                "Väljas on läinud hämaraks, hobusevaras magaba ikka veel ja ka vankrijuht tundub unine. \n " +
+                "Tõenäoliselt keegi ei märka, kui sa vankrist välja proovid hüpata. Kas sa hüppad? (Y/N)");
+        Scanner vastused = new Scanner(System.in);
+        String vastus = vastused.nextLine();
+        if(vastus.equals("Y")){
+            System.out.println("Loll, sa kukkusid surnuks.");
+            mängija.surm();
+        }else{
+            System.out.println("Sa jälgid veel mööduvat maastikku ja süvenevas pimeduses jääd sa vaikselt magama.");
+            mängija.järgminePäev(1);
+            peatus();
+        }
     }
 }
