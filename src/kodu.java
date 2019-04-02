@@ -83,7 +83,7 @@ public class kodu {
             mängija.järgminePäev(1);
         }
         else if (vastus.equals("N")){
-            System.out.println("Sa otsustad kommentaarist üle olla ja kuna teki all on mõnusalt soe jääd sa varsti magama.");
+            System.out.println("Sa otsustad kommentaarist üle olla ja kuna teki all on mõnusalt, soe jääd sa varsti magama.");
             mängija.järgminePäev(1);
         }
         else {
