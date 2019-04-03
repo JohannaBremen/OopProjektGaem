@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Linn {
     static void linnaServ(){
-        System.out.println("Sul õnnestu napilt püsti jääda ja sa astud vankrist välja. \n" +
+        System.out.println("Sul õnnestub napilt püsti jääda ja sa astud vankrist välja. \n" +
                 "Sa uurid oma ümbrust. Sa oled jõudnud väikese linnakese servale. \n" +
                 "Vankrile on vastu tulnud kolm valvurit ja keegi tähtis härra tähtsa dokumendiga. \n" +
                 "Ta loeb sulle dokumendi ette. Selles on kirjas, et väidetavalt oled sa varastanud ühe keeksi. \n" +

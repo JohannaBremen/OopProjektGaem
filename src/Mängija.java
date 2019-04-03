@@ -35,7 +35,21 @@ public class Mängija {
 
     public void järgminePäev(int päevi) {
         eluAeg += päevi;
-        System.out.println("Sa oled suutnud ellu jääda juba " + eluAeg + " päeva. Halb!");
+        try {
+            Thread.sleep(2000);
+            System.out.println(" ");
+        } catch (InterruptedException x) {
+        }
+        System.out.println("~~~");
+        System.out.println();
+        System.out.println("Sa oled elus juba " + eluAeg + ". päeva. Läheb hästi!");
+        System.out.println();
+        System.out.println("~~~");
+        try {
+            Thread.sleep(2000);
+            System.out.println(" ");
+        } catch (InterruptedException x) {
+        }
     }
 
     public void surm() {
