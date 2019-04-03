@@ -20,7 +20,7 @@ public class reeglid {
         else {
             System.out.println("Nii tore!");
             System.out.println("Alustame kohe seiklusega!");
-            DramaatilinePaus.ooteaeg(3);
+            AbiMeetodid.ooteaeg(3);
 
             kodu.algus();
         }

@@ -35,25 +35,25 @@ public class Mängija {
 
     public void järgminePäev(int päevi) {
         eluAeg += päevi;
-        DramaatilinePaus.ooteaeg(2);
+        AbiMeetodid.ooteaeg(2);
         System.out.println("~~~");
         System.out.println();
         System.out.println("Sa oled elus juba " + eluAeg + ". päeva. Läheb hästi!");
         System.out.println();
         System.out.println("~~~");
-        DramaatilinePaus.ooteaeg(2);
+        AbiMeetodid.ooteaeg(2);
     }
 
     public void surm() {
-        DramaatilinePaus.ooteaeg(4);
+        AbiMeetodid.ooteaeg(4);
         System.out.println("Sa surid. \n\n");
-        DramaatilinePaus.ooteaeg(1);
+        AbiMeetodid.ooteaeg(1);
         System.out.println("RIP in peperony");
-        DramaatilinePaus.ooteaeg(1);
+        AbiMeetodid.ooteaeg(1);
         System.out.println(getNimi());
-        DramaatilinePaus.ooteaeg(1);
+        AbiMeetodid.ooteaeg(1);
         System.out.println("Elatud päevi: " + eluAeg);
-        DramaatilinePaus.ooteaeg(1);
+        AbiMeetodid.ooteaeg(1);
         System.out.println("Sa surid. Nii kahju. 😢");
         System.out.println("Kas tahad veel mängida? (Y/N)");
         Scanner variandid = new Scanner(System.in);

@@ -8,7 +8,7 @@ public class kodu {
     public static void algus() {
         System.out.println("Ja siit ta tuleb! ");
         for (int i = 0; i < 10; i++) {
-            DramaatilinePaus.ooteaeg(0.5);
+            AbiMeetodid.ooteaeg(1);
 
         }
         System.out.println("~~~~MEIE SUUR SEIKLUS~~~ (Siia tuleb hiljem parem pealkiri vms)");
@@ -61,7 +61,7 @@ public class kodu {
             öö();
         } else {
             System.out.println("Sa ei oska kirjutada, proovi uuesti. \nKaks tähte ainult. \nEi ole nii raske. \nLoe siis uuesti ja mõtle järele, mida sult tahetakse.");
-            DramaatilinePaus.ooteaeg(2);
+            AbiMeetodid.ooteaeg(2);
             hobusevaras();
         }
     }
@@ -91,7 +91,7 @@ public class kodu {
         }
         else {
             System.out.println("Sa ei oska kirjutada, proovi uuesti. \nKaks tähte ainult. \nEi ole nii raske. \nLoe siis uuesti ja mõtle järele, mida sult tahetakse.");
-            DramaatilinePaus.ooteaeg(2);
+            AbiMeetodid.ooteaeg(2);
             tekk();
         }
 
@@ -104,9 +104,8 @@ public class kodu {
         String vastus = vastused.nextLine();
         if(vastus.equals("VÄLJA")){
             System.out.println("Sa otsustad käsule alluda ja vankrist lahkuda. Su jalg jääb vankriserva taha kinni ja sa hakkad kukkuma.");
-            DramaatilinePaus.ooteaeg(2);
-            double surm = Math.random();
-            if(surm<0.9){
+            AbiMeetodid.ooteaeg(2);
+            if (AbiMeetodid.kasSaabSurma(0.8) == true) {
                 Linn.linnaServ();
             }
             else {
@@ -117,9 +116,8 @@ public class kodu {
         else{
             System.out.println("Sa annad vankrijuhile märku, et tahad oma käsi vabaks saada. Ta raputab ainult pead. \n" +
                     "Sa oled sunnitud seotud kätega vankrist väljuma ja komistad.");
-            DramaatilinePaus.ooteaeg(2);
-            double surm = Math.random();
-            if(surm<0.9){
+            AbiMeetodid.ooteaeg(2);
+            if (AbiMeetodid.kasSaabSurma(0.8) == true) {
                 Linn.linnaServ();
             }
             else {
