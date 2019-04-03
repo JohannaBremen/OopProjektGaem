@@ -20,11 +20,7 @@ public class reeglid {
         else {
             System.out.println("Nii tore!");
             System.out.println("Alustame kohe seiklusega!");
-            try {
-                Thread.sleep(3000);
-            }
-            catch (InterruptedException x) {
-            }
+            DramaatilinePaus.ooteaeg(3);
 
             kodu.algus();
         }

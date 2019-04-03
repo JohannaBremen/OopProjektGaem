@@ -35,53 +35,25 @@ public class Mängija {
 
     public void järgminePäev(int päevi) {
         eluAeg += päevi;
-        try {
-            Thread.sleep(2000);
-            System.out.println(" ");
-        } catch (InterruptedException x) {
-        }
+        DramaatilinePaus.ooteaeg(2);
         System.out.println("~~~");
         System.out.println();
         System.out.println("Sa oled elus juba " + eluAeg + ". päeva. Läheb hästi!");
         System.out.println();
         System.out.println("~~~");
-        try {
-            Thread.sleep(2000);
-            System.out.println(" ");
-        } catch (InterruptedException x) {
-        }
+        DramaatilinePaus.ooteaeg(2);
     }
 
     public void surm() {
-        try {
-            Thread.sleep(4000);
-            System.out.println(" ");
-        } catch (InterruptedException x) {
-        }
+        DramaatilinePaus.ooteaeg(4);
         System.out.println("Sa surid. \n\n");
-        try {
-            Thread.sleep(1000);
-            System.out.println(" ");
-        } catch (InterruptedException x) {
-        }
+        DramaatilinePaus.ooteaeg(1);
         System.out.println("RIP in peperony");
-        try {
-            Thread.sleep(1000);
-            System.out.println(" ");
-        } catch (InterruptedException x) {
-        }
+        DramaatilinePaus.ooteaeg(1);
         System.out.println(getNimi());
-        try {
-            Thread.sleep(1000);
-            System.out.println(" ");
-        } catch (InterruptedException x) {
-        }
+        DramaatilinePaus.ooteaeg(1);
         System.out.println("Elatud päevi: " + eluAeg);
-        try {
-            Thread.sleep(1000);
-            System.out.println(" ");
-        } catch (InterruptedException x) {
-        }
+        DramaatilinePaus.ooteaeg(1);
         System.out.println("Sa surid. Nii kahju. 😢");
         System.out.println("Kas tahad veel mängida? (Y/N)");
         Scanner variandid = new Scanner(System.in);

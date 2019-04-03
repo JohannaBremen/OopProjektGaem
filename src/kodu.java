@@ -8,11 +8,7 @@ public class kodu {
     public static void algus() {
         System.out.println("Ja siit ta tuleb! ");
         for (int i = 0; i < 10; i++) {
-            try {
-                Thread.sleep(400);
-                System.out.println(" ");
-            } catch (InterruptedException x) {
-            }
+            DramaatilinePaus.ooteaeg(0.5);
 
         }
         System.out.println("~~~~MEIE SUUR SEIKLUS~~~ (Siia tuleb hiljem parem pealkiri vms)");
@@ -65,12 +61,7 @@ public class kodu {
             öö();
         } else {
             System.out.println("Sa ei oska kirjutada, proovi uuesti. \nKaks tähte ainult. \nEi ole nii raske. \nLoe siis uuesti ja mõtle järele, mida sult tahetakse.");
-            try {
-                Thread.sleep(2000);
-                System.out.println();
-                System.out.println();
-            } catch (InterruptedException x) {
-            }
+            DramaatilinePaus.ooteaeg(2);
             hobusevaras();
         }
     }
@@ -100,12 +91,7 @@ public class kodu {
         }
         else {
             System.out.println("Sa ei oska kirjutada, proovi uuesti. \nKaks tähte ainult. \nEi ole nii raske. \nLoe siis uuesti ja mõtle järele, mida sult tahetakse.");
-            try {
-                Thread.sleep(2000);
-                System.out.println();
-                System.out.println();
-            } catch (InterruptedException x) {
-            }
+            DramaatilinePaus.ooteaeg(2);
             tekk();
         }
 
@@ -118,11 +104,7 @@ public class kodu {
         String vastus = vastused.nextLine();
         if(vastus.equals("VÄLJA")){
             System.out.println("Sa otsustad käsule alluda ja vankrist lahkuda. Su jalg jääb vankriserva taha kinni ja sa hakkad kukkuma.");
-            try {
-                Thread.sleep(2000);
-                System.out.println(" ");
-            } catch (InterruptedException x) {
-            }
+            DramaatilinePaus.ooteaeg(2);
             double surm = Math.random();
             if(surm<0.9){
                 Linn.linnaServ();
@@ -135,11 +117,7 @@ public class kodu {
         else{
             System.out.println("Sa annad vankrijuhile märku, et tahad oma käsi vabaks saada. Ta raputab ainult pead. \n" +
                     "Sa oled sunnitud seotud kätega vankrist väljuma ja komistad.");
-            try {
-                Thread.sleep(2000);
-                System.out.println(" ");
-            } catch (InterruptedException x) {
-            }
+            DramaatilinePaus.ooteaeg(2);
             double surm = Math.random();
             if(surm<0.9){
                 Linn.linnaServ();
